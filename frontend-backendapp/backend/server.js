@@ -10,7 +10,10 @@ const app = express();
 
 // get a list five jokes 
 
-app.get('/jokes', (req, res) =>{
+// to resolve crocs error => '/api/jokes'  as port => its standard practice 
+
+
+app.get('/api/jokes', (req, res) =>{
     const jokes = [
         {
             id:1,
