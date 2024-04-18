@@ -40,6 +40,11 @@ app.get('/api/jokes', (req, res) =>{
             id:5,
             title: "5th joke ",
             content: "my 5th joke"
+        },
+        {
+            id:6,
+            title: "6th joke",
+            content: "new joke"
         }
     ];
     // we write an array 
