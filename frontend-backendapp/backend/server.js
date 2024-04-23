@@ -54,6 +54,8 @@ app.get('/api/jokes', (req, res) =>{
 })
 
 const port = process.env.PORT || 3000;
+// here we are taking the value of port from dotenv file by using 
+// process.env.name
 
 app.listen(port, () =>{
     console.log(`server is ready at http://localhost:${port}`);
