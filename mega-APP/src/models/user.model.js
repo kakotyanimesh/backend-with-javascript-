@@ -52,9 +52,9 @@ const userSchema = new Schema({
 },{timestamps: true})
 
 userSchema.pre("save", async function (next) {                            // write whole function
-    if(!this.isModified("password")) next()  // if password isnot changing then dont run the function of "SAVE" and next() if password changes (firsttime filled or updated then) run the bcrypt code 
+    if(!this.isModified("password")) return next()  // if password isnot changing then dont run the function of "SAVE" and next() if password changes (firsttime filled or updated then) run the bcrypt code 
 
-    this.password = bcrypt.hash(this.password, 10)
+    this.password = await bcrypt.hash(this.password, 10)
     // getting password access and crypting it with the help of bcrypt.hash(filethat need to be encrypt, number of rounds)
 
    next() 
