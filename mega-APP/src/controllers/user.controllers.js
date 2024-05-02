@@ -22,6 +22,7 @@ const registerUser = asynclandelers(async (req, res) => {
    console.log("email:", email);
 
    // validation - not empty
+   
    //   if(fullName === ""){
    //    throw new ApiError(400, "Full name is required")
    //   }
