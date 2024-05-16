@@ -1,5 +1,5 @@
 import { Router } from "express"
-import { logIn, logout, registerUser } from "../controllers/user.controllers.js"
+import { logIn, logout, registerUser, refreshAccessToken } from "../controllers/user.controllers.js"
 import { upload } from "../middlewares/multer.middlewares.js"
 import { varifyJwt } from "../middlewares/auth.middlewares.js"
 
@@ -18,10 +18,14 @@ router.route("/register").post(
     ]),
     registerUser)
 
+    //ak@gm
+    //223232323ascsafdfdsafdadsf
 
     router.route("/login").post(logIn)
 
     router.route("/logout").post(varifyJwt, logout)
+
+    router.route("/refreshtoken").post(refreshAccessToken)
 
 
 
